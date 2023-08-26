@@ -1,6 +1,3 @@
-// Polyfill for Chrome caching
-importScripts('js/cache-polyfill.js');
-
 // Install the ServiceWorker
 self.addEventListener('install', function(event) {
   event.waitUntil(
