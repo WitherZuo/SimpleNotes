@@ -1,0 +1,214 @@
+// 全局元素样式
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+
+    // 不显示滚动条
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// 动画样式
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+// 主体页面部分
+body {
+    height: 100vh;
+    background: linear-gradient(to left, #B24592, #F15F79);
+
+    // 标题栏部分
+    .title {
+        display: flex;
+        position: fixed;
+        padding: 10px;
+        left: env(titlebar-area-x, 0);
+        top: env(titlebar-area-y, 0);
+        width: env(titlebar-area-width, 100%);
+        height: env(titlebar-area-height, 40px);
+        -webkit-app-region: drag;
+        app-region: drag;
+        user-select: none;
+        z-index: 2;
+
+        // 图标
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        // 标题文本
+        span {
+            padding-left: 10px;
+            font-weight: bold;
+        }
+    }
+
+    // GitHub 图标区域
+    .info {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 15px 15px 12px 15px;
+        transition: background-color 300ms ease;
+
+        // 鼠标覆盖时的样式
+        &:hover svg {
+            fill: #333;
+        }
+
+        // GitHub 图标文本
+        span {
+            display: none;
+        }
+
+        // SVG 图标
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+            transition: fill 300ms ease;
+        }
+    }
+
+    // 笔记容器
+    .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 400px;
+        height: 620px;
+        background-color: #fff;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 20px 80px rgba($color: #000000, $alpha: 0.6);
+
+        // 容器内部-inner
+        &__inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            // 笔记本各元素样式
+            .notepad__ {
+
+                // 笔记本：标题
+                &heading {
+                    width: 100%;
+                    padding: 60px 40px 15px;
+                    border-bottom: 1px solid #f5f4f4;
+                    color: #5f5f5f;
+                    font-weight: 400;
+                }
+
+                // 笔记本：表单标签
+                &form-label {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    width: 1px;
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                }
+
+                // 笔记本：表单输入控件
+                &form-input {
+                    margin: 0;
+                    border: 0;
+                    width: 100%;
+                    font-size: 19px;
+                    color: #5f5f5f;
+                    padding: 30px 40px;
+                    background-color: transparent;
+                    transition: background-color 300ms ease;
+
+                    // 焦点时样式
+                    &:focus {
+                        outline: 0;
+                        background-color: #f5f5f5;
+                    }
+                }
+
+                // 笔记本：列表
+                &list {
+                    height: 365px;
+                    overflow: scroll;
+                }
+
+                // 笔记本：列表项目
+                &list-item {
+                    width: 100%;
+                    padding: 30px 40px;
+                    border: 0;
+                    border-bottom: 1px solid #f5f4f4;
+                    line-height: 1.3;
+                    font-size: 19px;
+                    list-style-type: none;
+                    color: #5f5f5f;
+                    background-color: transparent;
+
+                    // 列表条目首项
+                    &:first-of-type {
+                        border-top: 1px solid #f5f4f4;
+                    }
+                }
+
+                // 笔记本：清除所有
+                &clear {
+                    position: absolute;
+                    bottom: 0;
+                    display: none;
+                    width: 100%;
+                    padding: 20px;
+                    border: 0;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    background-color: #fff;
+                    color: #333;
+                    cursor: pointer;
+                    font-family: Helvetica Neue, sans-serif;
+                    letter-spacing: 2px;
+                    transition:
+                        color 300ms ease,
+                        background-color 300ms ease;
+
+                    // 显示时样式
+                    &--display {
+                        display: block;
+                    }
+
+                    // 焦点时样式
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    // 鼠标覆盖时样式
+                    &:hover {
+                        color: #fff;
+                        background-color: #ea3860;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+        .info svg {
+            fill: #f5f5f5;
+        }
+    }
+}
