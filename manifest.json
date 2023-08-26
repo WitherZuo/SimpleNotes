@@ -1,0 +1,75 @@
+{
+  "short_name": "Simple Notes",
+  "name": "Simple Notes",
+  "description": "An offline-capable notes app, using localStorage and ServiceWorker",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "orientation": "portrait",
+  "start_url": "/",
+  "id": "/",
+  "theme_color": "#B24592",
+  "background_color": "#B24592",
+  "categories": [
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-192x192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "img/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512x512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "主页",
+      "url": "/",
+      "description": "打开 Simple Notes 主页面",
+      "icons": [
+        {
+          "src": "img/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "新建笔记",
+      "url": "/#",
+      "description": "新建一条短笔记",
+      "icons": [
+        {
+          "src": "img/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9"
+}
