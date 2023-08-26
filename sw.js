@@ -18,7 +18,7 @@ self.addEventListener('install', function(event) {
         'css/style.css',
         'favicon.ico',
         'manifest.json',
-        'img/icon-60.png',
+        'img/icon-simple.png',
         'img/icon-180x180.png',
         'img/icon-192x192.png',
         'img/icon-192x192.maskable.png',
