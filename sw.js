@@ -19,9 +19,12 @@ self.addEventListener('install', function(event) {
         'favicon.ico',
         'manifest.json',
         'img/icon-60.png',
-        'img/icon-114.png',
-        'img/icon-152.png',
-        'img/icon-558.png'
+        'img/icon-180x180.png',
+        'img/icon-192x192.png',
+        'img/icon-192x192.maskable.png',
+        'img/icon-512x512.png',
+        'img/icon-512x512.maskable.png',
+        'js/cache-polyfill.js'
       ]);
     })
   );
