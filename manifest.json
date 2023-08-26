@@ -70,7 +70,21 @@
     }
   ],
   "screenshots": [
-
+    {
+      "src": "screenshot/screenshot_1.png",
+      "sizes": "627x992",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot/screenshot_2.png",
+      "sizes": "1303x992",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshot/screenshot_3.png",
+      "sizes": "1303x992",
+      "type": "image/png"
+    }
   ],
   "edge_side_panel": {
     "preferred_width": 400
