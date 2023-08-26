@@ -4,7 +4,8 @@
   "description": "A simple note webapp.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-sw": "workbox generateSW workbox-config.js",
+    "test": "browser-sync start --config bs-config.js"
   },
   "repository": {
     "type": "git",
