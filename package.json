@@ -1,0 +1,29 @@
+{
+  "name": "simplenotes",
+  "version": "1.0.0",
+  "description": "A simple note webapp.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WitherZuo/SimpleNotes.git"
+  },
+  "keywords": [
+    "simple",
+    "note",
+    "pwa"
+  ],
+  "author": "WitherZuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WitherZuo/SimpleNotes/issues"
+  },
+  "homepage": "https://github.com/WitherZuo/SimpleNotes#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.66.1",
+    "workbox-cli": "^7.0.0"
+  }
+}

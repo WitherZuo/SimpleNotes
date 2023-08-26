@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.wordWrap": "on"
+	},
+	"extensions": {
+		"recommendations": [
+			"pwabuilder.pwa-studio",
+			"ms-vscode.live-server"
+		]
+	}
+}
