@@ -21,7 +21,6 @@ self.addEventListener('install', function(event) {
         'img/icon-192x192.maskable.png',
         'img/icon-512x512.png',
         'img/icon-512x512.maskable.png',
-        'js/cache-polyfill.js'
       ]);
     })
   );
