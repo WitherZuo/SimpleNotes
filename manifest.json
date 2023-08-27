@@ -7,9 +7,9 @@
     "window-controls-overlay"
   ],
   "orientation": "portrait",
-  "start_url": "/SimpleNotes",
-  "id": "/SimpleNotes",
-  "scope": "/SimpleNotes",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
   "theme_color": "#B24592",
   "background_color": "#B24592",
   "categories": [
@@ -44,7 +44,7 @@
   "shortcuts": [
     {
       "name": "主页",
-      "url": "/SimpleNotes",
+      "url": "/",
       "description": "打开 Simple Notes 主页面",
       "icons": [
         {
@@ -57,7 +57,7 @@
     },
     {
       "name": "新建笔记",
-      "url": "/SimpleNotes#",
+      "url": "/#",
       "description": "新建一条短笔记",
       "icons": [
         {

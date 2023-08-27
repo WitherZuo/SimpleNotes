@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "build-sw": "workbox generateSW workbox-config.js",
-    "test": "browser-sync start --config bs-config.js"
+    "test": "browser-sync start --config bs-config.js",
+    "build": "gulp && npm run build-sw"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/WitherZuo/SimpleNotes#readme",
   "devDependencies": {
+    "@types/gulp": "^4.0.13",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "sass": "^1.66.1",

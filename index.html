@@ -11,7 +11,8 @@
   <meta name="application-name" content="Simple Notes" />
   <meta name="theme-color" content="#B24592">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/WitherZuo/SimpleNotes/master/img/icon-180x180.png">
+  <link rel="apple-touch-icon"
+    href="https://raw.githubusercontent.com/WitherZuo/SimpleNotes/master/img/icon-180x180.png">
 </head>
 
 <body>
@@ -41,7 +42,20 @@
     </div>
   </div>
   <script src="js/jquery.min.js"></script>
-  <script src="js/app.js"></script>
+  <script>
+    // Registering ServiceWorker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(function (registration) {
+
+        // Registration was successful
+        console.log('ServiceWorker registration successful. Scope: ' + registration.scope)
+      }).catch(function (err) {
+
+        // Registration failed with error
+        console.log('ServiceWorker registration failed. Error: ' + err);
+      });
+    }
+  </script>
   <script src="js/note-list.js"></script>
 </body>
 
