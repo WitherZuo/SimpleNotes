@@ -1,7 +1,7 @@
 const { series, src, dest } = require('gulp');
 
 function copySingleFile() {
-    return src(['./index.html', './manifest.json', 'favicon.ico'])
+    return src(['./index.html', './manifest.json', 'favicon.ico', './privacypolicy.html'])
         .pipe(dest('dist'))
 }
 
