@@ -20,9 +20,24 @@ function copyIconFile() {
         .pipe(dest('dist/img'))
 }
 
+function copyWinIconFile() {
+    return src('./img/windows11/*')
+        .pipe(dest('dist/img/windows11'))
+}
+
+function copyAndroidIconFile() {
+    return src('./img/android/*')
+        .pipe(dest('dist/img/android'))
+}
+
+function copyiOSIconFile() {
+    return src('./img/ios/*')
+        .pipe(dest('dist/img/ios'))
+}
+
 function copyScreenshot() {
     return src('./screenshot/*')
         .pipe(dest('dist/screenshot'))
 }
 
-exports.default = series(copySingleFile, copyCSSFile, copyJSFile, copyIconFile, copyScreenshot)
+exports.default = series(copySingleFile, copyCSSFile, copyJSFile, copyIconFile, copyWinIconFile, copyAndroidIconFile, copyiOSIconFile, copyScreenshot)
