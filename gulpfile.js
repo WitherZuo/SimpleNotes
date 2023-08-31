@@ -35,9 +35,14 @@ function copyiOSIconFile() {
         .pipe(dest('dist/img/ios'))
 }
 
+function copyDigitalAssetLink() {
+    return src('./.well-known/*')
+        .pipe(dest('dist/.well-known'))
+}
+
 function copyScreenshot() {
     return src('./screenshot/*')
         .pipe(dest('dist/screenshot'))
 }
 
-exports.default = series(copySingleFile, copyCSSFile, copyJSFile, copyIconFile, copyWinIconFile, copyAndroidIconFile, copyiOSIconFile, copyScreenshot)
+exports.default = series(copySingleFile, copyCSSFile, copyJSFile, copyIconFile, copyWinIconFile, copyAndroidIconFile, copyiOSIconFile, copyDigitalAssetLink, copyScreenshot)
