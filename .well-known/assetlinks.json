@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "dev.pages.simplenotes.twa",
+        "sha256_cert_fingerprints": ["CB:9B:A3:FD:0D:55:D5:90:19:72:62:6F:AF:E1:41:44:42:C8:76:99:0A:44:52:C1:C5:59:93:9B:AC:8C:C6:94"]
+      }
+    }]
