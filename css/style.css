@@ -200,6 +200,7 @@ body {
     overflow: scroll;
     box-shadow: none;
     animation: none;
+    border-radius: 0;
   }
 
   .notepad {
