@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "dev.pages.simplenotes.twa",
-        "sha256_cert_fingerprints": ["CB:9B:A3:FD:0D:55:D5:90:19:72:62:6F:AF:E1:41:44:42:C8:76:99:0A:44:52:C1:C5:59:93:9B:AC:8C:C6:94"]
+        "sha256_cert_fingerprints": ["10:8F:9E:89:3D:0D:C5:C2:AE:75:AE:58:7B:E2:A7:13:EE:34:E5:62:53:85:27:13:AD:E5:69:45:18:E8:CE:9F"]
       }
     }]
