@@ -1,12 +1,11 @@
 {
   "name": "simplenotes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple note webapp.",
   "main": "index.html",
   "scripts": {
-    "build-sw": "workbox generateSW workbox-config.js",
     "test": "browser-sync start --config bs-config.js",
-    "build": "gulp && npm run build-sw"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -28,6 +27,6 @@
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "sass": "^1.66.1",
-    "workbox-cli": "^7.0.0"
+    "workbox-build": "^7.0.0"
   }
 }

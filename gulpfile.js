@@ -1,48 +1,46 @@
 const { series, src, dest } = require('gulp');
+const workbox = require('workbox-build');
 
-function copySingleFile() {
-    return src(['./index.html', './manifest.json', 'favicon.ico', './privacypolicy.html'])
-        .pipe(dest('dist'))
+// 复制所有文件到制品目标
+function copyFiles() {
+    return src([
+        './index.html',
+        './favicon.ico',
+        './manifest.json',
+        './privacypolicy.html',
+        './.well-known/**/*',
+        './css/**/*',
+        './js/**/*',
+        './img/**/*',
+        './screenshot/**/*'
+    ], { base: './' })
+        .pipe(dest('./dist'))
 }
 
-function copyCSSFile() {
-    return src('./css/*.css')
-        .pipe(dest('dist/css'))
+// 生成 Service Worker
+function generateServiceWorker() {
+    return workbox.generateSW({
+        clientsClaim: true,
+        skipWaiting: true,
+        globDirectory: 'dist/',
+        globPatterns: [
+            '**/*.{css,ico,png,html,js,json}'
+        ],
+        globIgnores: [
+            'screenshot/*',
+            'img/windows11/*',
+            'img/ios/*',
+            'img/android/*'
+        ],
+        swDest: 'dist/sw.js',
+        ignoreURLParametersMatching: [
+            /^utm_/,
+            /^fbclid$/
+        ]
+    })
 }
 
-function copyJSFile() {
-    return src('./js/*')
-        .pipe(dest('dist/js'))
-}
-
-function copyIconFile() {
-    return src('./img/*')
-        .pipe(dest('dist/img'))
-}
-
-function copyWinIconFile() {
-    return src('./img/windows11/*')
-        .pipe(dest('dist/img/windows11'))
-}
-
-function copyAndroidIconFile() {
-    return src('./img/android/*')
-        .pipe(dest('dist/img/android'))
-}
-
-function copyiOSIconFile() {
-    return src('./img/ios/*')
-        .pipe(dest('dist/img/ios'))
-}
-
-function copyDigitalAssetLink() {
-    return src('./.well-known/*')
-        .pipe(dest('dist/.well-known'))
-}
-
-function copyScreenshot() {
-    return src('./screenshot/*')
-        .pipe(dest('dist/screenshot'))
-}
-
-exports.default = series(copySingleFile, copyCSSFile, copyJSFile, copyIconFile, copyWinIconFile, copyAndroidIconFile, copyiOSIconFile, copyDigitalAssetLink, copyScreenshot)
+exports.default = series(
+    copyFiles,
+    generateServiceWorker
+)
