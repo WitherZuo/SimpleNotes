@@ -8,6 +8,7 @@ function copyFiles() {
         './src/favicon.ico',
         './src/manifest.json',
         './src/privacypolicy.html',
+        './src/robots.txt',
         './src/.well-known/**/*',
         './src/css/**/*',
         './src/js/**/*',

@@ -1,0 +1,27 @@
+# robots.txt
+User-agent: Baiduspider
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /screenshot/
+Disallow: /.well-known/
+Disallow: /privacypolicy.html
+
+User-agent: Bingbot
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /screenshot/
+Disallow: /.well-known/
+Disallow: /privacypolicy.html
+
+User-agent: Googlebot
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+Disallow: /screenshot/
+Disallow: /.well-known/
+Disallow: /privacypolicy.html
+
+User-agent: *
+Allow: /
