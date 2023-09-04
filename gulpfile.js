@@ -4,16 +4,16 @@ const workbox = require('workbox-build');
 // 复制所有文件到制品目标
 function copyFiles() {
     return src([
-        './index.html',
-        './favicon.ico',
-        './manifest.json',
-        './privacypolicy.html',
-        './.well-known/**/*',
-        './css/**/*',
-        './js/**/*',
-        './img/**/*',
-        './screenshot/**/*'
-    ], { base: './' })
+        './src/index.html',
+        './src/favicon.ico',
+        './src/manifest.json',
+        './src/privacypolicy.html',
+        './src/.well-known/**/*',
+        './src/css/**/*',
+        './src/js/**/*',
+        './src/img/**/*',
+        './src/screenshot/**/*'
+    ], { base: './src' })
         .pipe(dest('./dist'))
 }
 

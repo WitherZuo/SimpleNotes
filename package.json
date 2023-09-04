@@ -2,9 +2,9 @@
   "name": "simplenotes",
   "version": "1.0.1",
   "description": "A simple note webapp.",
-  "main": "index.html",
+  "main": "./dist/index.html",
   "scripts": {
-    "test": "browser-sync start --config bs-config.js",
+    "test": "browser-sync start --server ./dist --config bs-config.js",
     "build": "gulp"
   },
   "repository": {
